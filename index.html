@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图书馆数据看板</title>
+  <link href="libs/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 56px; }
+    .section-title { border-left: 4px solid #0d6efd; padding-left: 10px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">图书馆数据看板</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="#books">图书查询</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">借阅统计</a></li>
+          <li class="nav-item"><a class="nav-link" href="three-d/scene.html">图书馆三维</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-4">
+    <section id="home" class="mb-5">
+      <h2 class="section-title h4 mb-3">首页 · 馆藏概览</h2>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">馆藏图书</h3>
+              <p class="card-text fs-3 text-primary" id="stat-total">—</p>
+              <p class="card-text small text-muted">册</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">今日借阅</h3>
+              <p class="card-text fs-3 text-success" id="stat-borrow">—</p>
+              <p class="card-text small text-muted">人次</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">在馆人数</h3>
+              <p class="card-text fs-3 text-warning" id="stat-visitors">—</p>
+              <p class="card-text small text-muted">人（模拟）</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">三维导览</h3>
+              <p class="card-text fs-3 text-info">3D</p>
+              <p class="card-text small text-muted">
+                <a href="three-d/scene.html" class="text-decoration-none">进入 →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="books" class="mb-5">
+      <h2 class="section-title h4 mb-3">图书查询</h2>
+      <div class="alert alert-secondary">
+        （第二步在此添加图书筛选：按类别／借阅状态过滤，数据写死在 JS 数组。）
+      </div>
+    </section>
+    <section id="stats" class="mb-5">
+      <h2 class="section-title h4 mb-3">借阅统计</h2>
+      <div class="alert alert-secondary">
+        （第二步在此添加统计图表，加载 data/books.json 渲染各品类借阅量。）
+      </div>
+    </section>
+  </main>
+  <footer class="bg-light py-3 text-center text-muted small">
+    图书馆数据看板 · 自主实践任务
+  </footer>
+  <script src="libs/bootstrap.bundle.min.js"></script>
+</body>
+</html>
